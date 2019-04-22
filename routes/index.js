@@ -1,5 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const {
+  reviewerLogin
+} = require('../controllers/index');
 
 /* GET home page. */
 router.get('/', (req, res, next) => {

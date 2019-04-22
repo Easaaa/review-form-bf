@@ -3,7 +3,11 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const passport = require('passport');
+const passportLocalMongoose = require('passport-local-mongoose');
+const Reviewer = require('./models/reviewer');
 
+// Require routes
 const indexRouter = require('./routes/index');
 const collectionsRouter = require('./routes/collections');
 
@@ -21,6 +25,18 @@ app.use(express.urlencoded({
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Configure passport and session
+const session = require('express-session');
+app.use(session({
+  secret: 'road to one million',
+  resave: false,
+  saveUninitialized: true
+}));
+passport.use(Reviewer.createStrategy());
+passport.serializeUser(Reviewer.serializeUser());
+passport.deserializeUser(Reviewer.deserializeUser());
+
+// Mount routes
 app.use('/', indexRouter);
 app.use('/collections', collectionsRouter);
 

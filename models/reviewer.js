@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const passportLocalMongoose = require('passport-loca-mongoose');
+const passportLocalMongoose = require('passport-local-mongoose');
 const Schema = mongoose.Schema;
 
 const ReviewerSchema = new Schema({
@@ -14,4 +14,4 @@ const ReviewerSchema = new Schema({
 
 ReviewerSchema.plugin(passportLocalMongoose);
 
-modulse.exports = mongoose.model('Reviewer', ReviewerSchema);
+module.exports = mongoose.model('Reviewer', ReviewerSchema);
