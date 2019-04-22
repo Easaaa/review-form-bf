@@ -8,4 +8,13 @@ router.get('/', (req, res, next) => {
   });
 });
 
+/* GET login. */
+router.get('/login', (req, res, next) => {
+  res.send("LOGIN PAGE");
+});
+/* POST login. */
+router.post('/login', (req, res, next) => {
+  res.send("POST LOGIN");
+});
+
 module.exports = router;
