@@ -8,7 +8,7 @@ const ReviewerSchema = new Schema({
   password: String,
   placeReviewed: [{
     type: Schema.Types.ObjectId,
-    ref: 'Post'
+    ref: 'Place'
   }]
 });
 

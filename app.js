@@ -6,12 +6,24 @@ const logger = require('morgan');
 const passport = require('passport');
 const passportLocalMongoose = require('passport-local-mongoose');
 const Reviewer = require('./models/reviewer');
+const mongoose = require('mongoose');
+const session = require('express-session');
 
 // Require routes
 const indexRouter = require('./routes/index');
 const collectionsRouter = require('./routes/collections');
 
 const app = express();
+
+// Connect to the database
+mongoose.connect('mongodb://localhost:27017/review-form-bf', {
+  useNewUrlParser: true
+});
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', () => {
+  console.log('we are connected!');
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -26,7 +38,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Configure passport and session
-const session = require('express-session');
 app.use(session({
   secret: 'road to one million',
   resave: false,

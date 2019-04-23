@@ -35,7 +35,7 @@ const PlaceSchema = new Schema({
   notes: String,
   reviewer: {
     type: Schema.Types.ObjectId,
-    ref: 'reviwer'
+    ref: 'Reviewer'
   }
 });
 

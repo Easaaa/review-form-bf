@@ -16,8 +16,6 @@ router.get('/login', (req, res, next) => {
   res.send("LOGIN PAGE");
 });
 /* POST login. */
-router.post('/login', (req, res, next) => {
-  res.send("POST LOGIN");
-});
+router.post('/login', reviewerLogin);
 
 module.exports = router;
