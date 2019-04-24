@@ -1,11 +1,13 @@
 const mongoose = require('mongoose');
-const passportLocalMongoose = require('passport-loca-mongoose');
 const Schema = mongoose.Schema;
 
-const PlaceSchema = new Schema({
+const ReviewSchema = new Schema({
   name: String,
   category: String,
-  date: Date,
+  date: {
+    type: Date,
+    default: Date.now
+  },
   foodQualityRate: [{
     taste: Number,
     presentation: Number,
@@ -13,15 +15,13 @@ const PlaceSchema = new Schema({
   }],
   serviceRate: [{
     courteus: Number,
-    professionality: Number,
     timing: Number,
     presence: Number
   }],
   atmosphere: [{
     attractive: Number,
     cleanliness: Number,
-    temperature: Number,
-    waiterLooks: Number
+    temperature: Number
   }],
   cleanliness: [{
     bathroom: Number,
@@ -33,12 +33,12 @@ const PlaceSchema = new Schema({
     priceQuantity: Number
   }],
   notes: String,
-  reviewer: {
+  author: {
     type: Schema.Types.ObjectId,
-    ref: 'Reviewer'
+    ref: 'User'
   }
 });
 
 PlaceSchema.plugin(passportLocalMongoose);
 
-modulse.exports = mongoose.model('Place', PlaceSchema);
+modulse.exports = mongoose.model('Review', ReviewSchema);

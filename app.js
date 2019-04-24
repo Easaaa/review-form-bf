@@ -1,59 +1,67 @@
-const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
-const cookieParser = require('cookie-parser');
+const favicon = require('serve-favicon');
 const logger = require('morgan');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
 const passport = require('passport');
-const passportLocalMongoose = require('passport-local-mongoose');
-const Reviewer = require('./models/reviewer');
-const mongoose = require('mongoose');
+const User = require('./models/user');
 const session = require('express-session');
+const mongoose = require('mongoose');
 
-// Require routes
-const indexRouter = require('./routes/index');
-const collectionsRouter = require('./routes/collections');
+// require routes
+const index = require('./routes/index');
+const reviews = require('./routes/reviews');
 
 const app = express();
 
-// Connect to the database
-mongoose.connect('mongodb://localhost:27017/review-form-bf', {
+// connect to the database
+mongoose.connect('mongodb://127.0.0.1/test', {
   useNewUrlParser: true
 });
+
 const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', () => {
-  console.log('we are connected!');
+  console.log('Connction has been made!');
+}).on('error', error => {
+  console.log('Connection error:', error);
 });
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+// uncomment after placing your favicon in /public
+//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
   extended: false
 }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Configure passport and session
+// Configure Passport and Sessions
 app.use(session({
-  secret: 'road to one million',
+  secret: 'hang ten dude!',
   resave: false,
   saveUninitialized: true
 }));
-passport.use(Reviewer.createStrategy());
-passport.serializeUser(Reviewer.serializeUser());
-passport.deserializeUser(Reviewer.deserializeUser());
+
+passport.use(User.createStrategy());
+
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
 // Mount routes
-app.use('/', indexRouter);
-app.use('/collections', collectionsRouter);
+app.use('/', index);
+app.use('/reviews', reviews);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
-  next(createError(404));
+  const err = new Error('Not Found');
+  err.status = 404;
+  next(err);
 });
 
 // error handler

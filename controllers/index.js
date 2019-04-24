@@ -1,12 +1,12 @@
-const Reviewer = require('../models/reviewer');
+const User = require('../models/user');
 
 module.exports = {
   postRegister(req, res, next) {
-    const newReviewer = new Reviewer({
-      name: req.body.name,
+    const newUser = new User({
+      username: req.body.username,
       email: req.body.email
     });
-    User.register(newReviewer, req.body.password, (err) => {
+    User.register(newUser, req.body.password, (err) => {
       if (err) {
         console.log('error while user register!', err);
         return next(err);
