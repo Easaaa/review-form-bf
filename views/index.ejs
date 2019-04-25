@@ -1,12 +1,248 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <a href="reviews">BUTTON</a>
-  </body>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="stylesheets/form.css" type="text/css">
+  <title>Review Form</title>
+</head>
+
+<body>
+  <div id="title">
+    <h1>Review Form</h1>
+    <em>Reviwer's Name</em>
+  </div>
+  <form id="place-form">
+    <div id="place-name">
+      <input id="placeName" type="text" placeholder="Place Name">
+    </div>
+
+    <div id="category">
+      <label for="cat-select">
+        <h2>Choose a category</h2>
+      </label>
+      <select id="cat-select">
+        <option value="">--Please choose a category--</option>
+        <option value="Tapas">Tapas</option>
+        <option value="Paella">Paella</option>
+        <option value="Coffe&Work">Coffe&Work</option>
+        <option value="CheapEats">CheapEats</option>
+        <option value="Pizza">Pizza</option>
+        <option value="Vegan">Vegan</option>
+        <option value="Museum">Museum</option>
+        <option value="Church">Church</option>
+        <option value="Club">Club</option>
+        <option value="Pub">Pub</option>
+        <option value="IceCream">IceCream</option>
+        <option value="LocalShop">LocalShop</option>
+        <option value="Churro">Churro</option>
+        <option value="SportBar">SportBar</option>
+        <option value="Brunch">Brunch</option>
+        <option value="DayTrip">DayTrip</option>
+        <option value="Cocktail">Cocktail</option>
+        <option value="SpanishCousine">SpanishCousine</option>
+        <option value="Beach">Beach</option>
+        <option value="Terrace">Terrace</option>
+        <option value="BarStreet">BarStreet</option>
+      </select>
+    </div>
+    <div id="date-review" class="row">
+      <label for="date">
+        <h2>Date review</h2>
+      </label>
+      <input type="date" id="date" name="date-review" min="2019-04-01" max="2030-12-31">
+    </div>
+
+    <div class="row">
+      <div class="question">
+        <h2>Quality of the food</h2>
+      </div>
+      <form>
+        <div class="rate">
+          <h3>Taste:</h3>
+          <select name="taste" id="taste">
+            <option value="">--</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <div class="rate">
+          <h3>Presentation:</h3>
+          <select name="presentation" id="presentation">
+            <option value="">--</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <div class="rate">
+          <h3>Quantity:</h3>
+          <select name="quantity" id="quantity">
+            <option value="">--</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+    </div>
+    <div class="row">
+      <div class="question">
+        <h2>Service</h2>
+      </div>
+      <div class="rate">
+        <h3>Courteus / Polite:</h3>
+        <select name="polite" id="polite">
+          <option value="">--</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+      <div class="rate">
+        <h3>Timing:</h3>
+        <select name="timing" id="timing">
+          <option value="">--</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+      <div class="rate">
+        <h3>Presence:</h3>
+        <select name="presence" id="presence">
+          <option value="">--</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="question">
+        <h2>Atmosphere</h2>
+      </div>
+      <div class="rate">
+        <h3>Attractive</h3>
+        <select name="attractive" id="attractive">
+          <option value="">--</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+      <div class="rate">
+        <h3>Cleanliness:</h3>
+        <select name="cleanliness" id="cleanliness">
+          <option value="">--</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+      <div class="rate">
+        <h3>Temperature:</h3>
+        <select name="temperature" id="temperature">
+          <option value="">--</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+      <div class="row">
+        <div class="question">
+          <h2>Cleanliness</h2>
+        </div>
+        <div class="rate">
+          <h3>Bathroom</h3>
+          <select name="bathr" id="bathr">
+            <option value="">--</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <div class="rate">
+          <h3>Table:</h3>
+          <select name="table" id="table">
+            <option value="">--</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <div class="rate">
+          <h3>Floor:</h3>
+          <select name="floor" id="floor">
+            <option value="">--</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="question">
+          <h2>Price</h2>
+        </div>
+        <div class="rate">
+          <h3>Quality = to price</h3>
+          <select name="priceQual" id="priceQual">
+            <option value="">--</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <div class="rate">
+          <h3>Quantity = to price:</h3>
+          <select name="priceQuan" id="priceQuan">
+            <option value="">--</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <textarea name="extra-note" id="extra-note" cols="30" rows="5"
+          placeholder="Notes - Keep it short..."></textarea>
+      </div>
+      <div id="button">
+        <input id="btn" type="submit" value="Submit"></input>
+      </div>
+  </form>
+
+</body>
+
 </html>

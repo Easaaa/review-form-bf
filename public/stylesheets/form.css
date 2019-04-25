@@ -1,0 +1,97 @@
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-weight: 400;
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 3rem;
+}
+
+h2 {
+  font-weight: 100;
+  text-decoration: underline;
+  color: rgb(252, 69, 69);
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+textarea {
+  border: none;
+  background: whitesmoke;
+  padding: 20px;
+}
+
+#title {
+  text-align: center;
+  background: whitesmoke;
+  padding: 10px;
+}
+
+#place-name {
+  padding: 15px 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#place-name input {
+  padding: 10px 30px;
+  max-width: 300px;
+  text-align: center;
+  font-size: 1rem;
+  background: rgb(255, 185, 185);
+}
+
+#category {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid rgb(168, 168, 168);
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 0 20px 20px 20px;
+}
+
+#date-review {
+  padding-bottom: 15px;
+}
+
+#date-review input {
+  font-size: 1rem;
+}
+
+.row {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid rgb(168, 168, 168);
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.rate {
+  padding-bottom: 10px;
+}
+
+#button {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+#button input {
+  background: rgb(158, 158, 158);
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  cursor: pointer;
+}
