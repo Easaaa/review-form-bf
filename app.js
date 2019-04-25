@@ -20,11 +20,11 @@ mongoose.connect('mongodb://127.0.0.1/test', {
   useNewUrlParser: true
 });
 
+
 const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', () => {
-  console.log('Connction has been made!');
-}).on('error', error => {
-  console.log('Connection error:', error);
+  console.log('we\'re connected!');
 });
 
 // view engine setup
@@ -47,12 +47,14 @@ app.use(session({
   resave: false,
   saveUninitialized: true
 }));
+
 app.use(passport.initialize());
 app.use(passport.session());
 
 passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
+
 
 // Mount routes
 app.use('/', index);
