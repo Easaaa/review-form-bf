@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const passportLocalMongoose = require('passport-local-mongoose');
 const Schema = mongoose.Schema;
 
 const ReviewSchema = new Schema({
@@ -39,6 +40,6 @@ const ReviewSchema = new Schema({
   }
 });
 
-PlaceSchema.plugin(passportLocalMongoose);
+ReviewSchema.plugin(passportLocalMongoose);
 
-modulse.exports = mongoose.model('Review', ReviewSchema);
+module.exports = mongoose.model('Review', ReviewSchema);

@@ -2,10 +2,16 @@ const express = require('express');
 const router = express.Router({
   mergeParams: true
 });
+const {
+  errorHandler
+} = require('../middleware');
+const {
+  getReviews
+} = require('../controllers/reviews');
 
 /* GET reviews index /posts/:id/reviews */
 router.get('/', (req, res, next) => {
-  res.send('INDEX /posts/:id/reviews');
+  res.render('../views/reviews/index.ejs');
 });
 
 /* review reviews create /posts/:id/reviews */
