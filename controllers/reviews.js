@@ -6,5 +6,8 @@ module.exports = {
     res.render('reviews/index', {
       reviews
     });
+  },
+  newReviews(req, res, next) {
+    res.render('reviews/new');
   }
 }
