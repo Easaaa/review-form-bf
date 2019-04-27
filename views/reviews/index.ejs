@@ -20,6 +20,8 @@
     <input type="text" placeholder="Search Reviewer">
   </form>
 
+  
+
   <table>
     <thead>
       <tr>
@@ -32,27 +34,31 @@
         <th>Price</th>
         <th>TotalRating</th>
         <th>Reviewer</th>
+        <th>Date</th>
         <th></th>
         <th></th>
         <th></th>
       </tr>
     </thead>
+    <% reviews.forEach(function(review){ %>
     <tbody class="place-list">
       <tr>
-        <td>Federal Cafe</td>
-        <td>CoffeWork</td>
-        <td>4</td>
-        <td>4</td>
+        <td><%= review.name %></td>
+        <td><%= review.category %></td>
+        <td><%= review.foodQualityRate %></td>
+        <td><%= review.serviceRate %></td>
         <td>5</td>
         <td>3</td>
         <td>4</td>
         <td>4.50</td>
-        <td>Francisca Garcia</td>
+        <td><%= review.author %></td>
+        <td><%= review.date.toDateString() %></td>
         <td><a id="delete" href="#">X</a></td>
-        <td><i id="edit" class="far fa-edit"></i></td>
+        <td><a href="/reviews/<%=review.id%>/edit"><i id="edit" class="far fa-edit"></i></a></td>
         <td><i id="notes" class="far fa-sticky-note"></i></td>
       </tr>
     </tbody>
+  <% }); %>
   </table>
 
 </body>
