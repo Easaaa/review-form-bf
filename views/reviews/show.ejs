@@ -49,7 +49,11 @@
         <td>4.50</td>
         <td><%= review.author %></td>
         <td><%= review.date.toDateString() %></td>
-        <td><a id="delete" href="#">X</a></td>
+        <td>
+          <form action="/reviews/<%=review.id%>?_method=DELETE" method="POST">
+            <input type="submit" value="X" id="delete">
+          </form>
+        </td>
         <td><a href="/reviews/<%=review.id%>/edit"><i id="edit" class="far fa-edit"></i></a></td>
         <td><i id="notes" class="far fa-sticky-note"></i></td>
       </tr>

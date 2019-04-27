@@ -31,5 +31,9 @@ module.exports = {
   async reviewUpdate(req, res, next) {
     let review = await Review.findByIdAndUpdate(req.params.id, req.body.review);
     res.redirect('/reviews');
+  },
+  async reviewDestroy(req, res, next) {
+    await Review.findByIdAndRemove(req.params.id);
+    res.redirect('/reviews');
   }
 }

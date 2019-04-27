@@ -11,7 +11,8 @@ const {
   reviewCreate,
   reviewShow,
   reviewEdit,
-  reviewUpdate
+  reviewUpdate,
+  reviewDestroy
 } = require('../controllers/reviews');
 
 /* GET reviews index /reviews */
@@ -33,9 +34,7 @@ router.get('/:id/edit', asyncErrorHandler(reviewEdit));
 router.put('/:id', asyncErrorHandler(reviewUpdate));
 
 /* DELETE reviews  */
-router.delete('/:review_id', (req, res, next) => {
-  res.send('DELETE /posts/:id/reviews/:review_id');
-});
+router.delete('/:id', asyncErrorHandler(reviewDestroy));
 
 
 module.exports = router;
