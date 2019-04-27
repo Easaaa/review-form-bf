@@ -7,7 +7,9 @@ const {
 } = require('../middleware');
 const {
   getReviews,
-  newReviews
+  newReviews,
+  createReviews,
+  showReviews
 } = require('../controllers/reviews');
 
 /* GET reviews index /reviews */
@@ -17,9 +19,10 @@ router.get('/', errorHandler(getReviews));
 router.get('/new', errorHandler(newReviews));
 
 /* POST reviews create  */
-router.post('/', (req, res, next) => {
-  res.send('CREATE /posts/:id/reviews');
-});
+router.post('/', errorHandler(createReviews));
+
+/* GET reviews show  */
+router.get('/:id', errorHandler(showReviews));
 
 /* GET reviews  */
 router.get('/:review_id/edit', (req, res, next) => {

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/stylesheets/reviews.css" type="text/css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <title>Database</title>
+</head>
+
+<body>
+  <header>
+    <h2>The Review</h2>
+    <p>This is a summary of your review, you can edit some part if you are not sure about something.</p>
+    <a href="new"><i class="fas fa-check"></i></a>
+  </header>
+
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Quality of the Food</th>
+        <th>Service</th>
+        <th>Atmosphere</th>
+        <th>Cleanliness</th>
+        <th>Price</th>
+        <th>TotalRating</th>
+        <th>Reviewer</th>
+        <th>Date</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody class="place-list">
+      <tr>
+        <td><%= review.name %></td>
+        <td><%= review.category %></td>
+        <td><%= review.foodQualityRate %></td>
+        <td><%= review.serviceRate %></td>
+        <td>5</td>
+        <td>3</td>
+        <td>4</td>
+        <td>4.50</td>
+        <td><%= review.author %></td>
+        <td><%= review.date.toDateString() %></td>
+        <td><a id="delete" href="#">X</a></td>
+        <td><i id="edit" class="far fa-edit"></i></td>
+        <td><i id="notes" class="far fa-sticky-note"></i></td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+
+</html>

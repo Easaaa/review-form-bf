@@ -17,15 +17,15 @@
 
   <form id="place-form" action="/reviews" method="POST">
     <div id="place-name">
-      <input id="placeName" type="text" placeholder="Place Name" required>
+      <input id="placeName" name="name" type="text" placeholder="Place Name" required>
     </div>
 
     <div id="category">
       <label for="cat-select">
         <h2>Choose a category</h2>
       </label>
-      <select id="cat-select" required>
-        <option value="">--Please choose a category--</option>
+      <select id="cat-select" name="category" required>
+        <option value="">-Please choose a category-</option>
         <option value="Tapas">Tapas</option>
         <option value="Paella">Paella</option>
         <option value="Coffe&Work">Coffe&Work</option>
@@ -62,7 +62,7 @@
         <div class="rate">
           <h3>Taste:</h3>
           <select name="taste" id="taste" required>
-            <option value="">--</option>
+            <option value="">-</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -73,7 +73,7 @@
         <div class="rate">
           <h3>Presentation:</h3>
           <select name="presentation" id="presentation" required>
-            <option value="">--</option>
+            <option value="">-</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -84,7 +84,7 @@
         <div class="rate">
           <h3>Quantity:</h3>
           <select name="quantity" id="quantity" required>
-            <option value="">--</option>
+            <option value="">-</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -99,8 +99,8 @@
       </div>
       <div class="rate">
         <h3>Courteus / Polite:</h3>
-        <select name="polite" id="polite" required>
-          <option value="">--</option>
+        <select name="courteus" id="" required>
+          <option value="">-</option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -110,8 +110,8 @@
       </div>
       <div class="rate">
         <h3>Timing:</h3>
-        <select name="timing" id="timing" required> 
-          <option value="">--</option>
+        <select name="timing" id="" required>
+          <option value="">-</option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -122,7 +122,7 @@
       <div class="rate">
         <h3>Presence:</h3>
         <select name="presence" id="presence" required>
-          <option value="">--</option>
+          <option value="">-</option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -138,7 +138,7 @@
       <div class="rate">
         <h3>Attractive</h3>
         <select name="attractive" id="attractive" required>
-          <option value="">--</option>
+          <option value="">-</option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -148,8 +148,8 @@
       </div>
       <div class="rate">
         <h3>Cleanliness:</h3>
-        <select name="cleanliness" id="cleanliness" required>
-          <option value="">--</option>
+        <select name="clean" id="" required>
+          <option value="">-</option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -160,7 +160,7 @@
       <div class="rate">
         <h3>Temperature:</h3>
         <select name="temperature" id="temperature" required>
-          <option value="">--</option>
+          <option value="">-</option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -174,8 +174,8 @@
         </div>
         <div class="rate">
           <h3>Bathroom</h3>
-          <select name="bathr" id="bathr" required>
-            <option value="">--</option>
+          <select name="bathroom" id="bathr" required>
+            <option value="">-</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -186,7 +186,7 @@
         <div class="rate">
           <h3>Table:</h3>
           <select name="table" id="table" required>
-            <option value="">--</option>
+            <option value="">-</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -197,7 +197,7 @@
         <div class="rate">
           <h3>Floor:</h3>
           <select name="floor" id="floor" required>
-            <option value="">--</option>
+            <option value="">-</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -212,8 +212,8 @@
         </div>
         <div class="rate">
           <h3>Quality = to price</h3>
-          <select name="priceQual" id="priceQual" required> 
-            <option value="">--</option>
+          <select name="priceQuality" id="priceQual" required> 
+            <option value="">-</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -223,8 +223,8 @@
         </div>
         <div class="rate">
           <h3>Quantity = to price:</h3>
-          <select name="priceQuan" id="priceQuan" required>
-            <option value="">--</option>
+          <select name="priceQuantity" id="priceQuan" required>
+            <option value="">-</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -234,7 +234,7 @@
         </div>
       </div>
       <div class="row">
-        <textarea name="extra-note" id="extra-note" cols="30" rows="10"
+        <textarea name="notes" id="extra-note" cols="30" rows="10"
           placeholder="NOTES" required></textarea>
       </div>
       <div id="button">
