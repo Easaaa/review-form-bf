@@ -46,12 +46,12 @@
       <tr>
         <td><%= review.name %></td>
         <td><%= review.category %></td>
-        <td><%= review.foodQualityRate %></td>
-        <td><%= review.serviceRate %></td>
-        <td>5</td>
-        <td>3</td>
-        <td>4</td>
-        <td>4.50</td>
+        <td id="foodQualityRate"><%= (review.taste + review.presentation + review.quantity) / 3%></td>
+        <td id="serviceRate"><%= (review.courteus + review.timing + review.presence) / 3 %></td>
+        <td id="atmosphereRate"><%= (review.attractive + review.clean + review.temperature) / 3 %></td>
+        <td id="cleanlinessRate"><%= (review.bathroom + review.table + review.floor) / 3 %></td>
+        <td id="priceRate"><%= (review.priceQuality + review.priceQuantity) / 2 %></td>
+        <td id="totalRate"></td>
         <td><%= review.author %></td>
         <td><%= review.date.toDateString() %></td>
         <td>
@@ -66,6 +66,7 @@
     <% }); %>
   </table>
 
+<script src="/javascripts/reviewIndex.js"></script>
 </body>
 
 </html>
