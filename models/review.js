@@ -9,35 +9,20 @@ const ReviewSchema = new Schema({
     type: Date,
     default: Date.now
   },
-  foodQualityRate: [{
-      taste: Number
-    },
-    {
-      presentation: Number
-    },
-    {
-      quantity: Number
-    }
-  ],
-  serviceRate: [{
-    courteus: String,
-    timing: String,
-    presence: String
-  }],
-  atmosphere: [{
-    attractive: String,
-    clean: String,
-    temperature: String
-  }],
-  cleanliness: [{
-    bathroom: String,
-    table: String,
-    floor: String
-  }],
-  price: [{
-    priceQuality: String,
-    priceQuantity: String
-  }],
+  taste: Number,
+  presentation: Number,
+  quantity: Number,
+  courteus: Number,
+  timing: Number,
+  presence: Number,
+  attractive: Number,
+  clean: Number,
+  temperature: Number,
+  bathroom: Number,
+  table: Number,
+  floor: Number,
+  priceQuality: Number,
+  priceQuantity: Number,
   notes: String,
   author: {
     type: Schema.Types.ObjectId,
