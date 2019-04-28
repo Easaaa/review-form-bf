@@ -1,21 +1,21 @@
-const foodQualityRate = document.getElementById('foodQualityRate');
-const newFoodQualityRate = parseFloat(foodQualityRate.textContent).toPrecision(2);
-foodQualityRate.textContent = newFoodQualityRate;
+// Selectors
+const foodQualityRate = document.querySelectorAll('.foodQualityRate');
+const serviceRate = document.querySelectorAll('.serviceRate');
+const atmosphereRate = document.querySelectorAll('.atmosphereRate');
+const cleanlinessRate = document.querySelectorAll('.cleanlinessRate');
+const priceRate = document.querySelectorAll('.priceRate');
+const totalRate = document.querySelectorAll('.totalRate');
 
-const serviceRate = document.getElementById('serviceRate');
-const newServiceRate = parseFloat(serviceRate.textContent).toPrecision(2);
-serviceRate.textContent = newServiceRate;
+function trasformToArray(selectors) {
+  Array.from(selectors).forEach(function (select) {
+    selectParse = parseFloat(select.innerText).toPrecision(2);
+    select.textContent = selectParse;
+  });
+}
 
-const atmosphereRate = document.getElementById('atmosphereRate');
-const newAtmosphereRate = parseFloat(atmosphereRate.textContent).toPrecision(2);
-atmosphereRate.textContent = newAtmosphereRate;
-
-const cleanlinessRate = document.getElementById('cleanlinessRate');
-const newCleanlinessRate = parseFloat(cleanlinessRate.textContent).toPrecision(2);
-cleanlinessRate.textContent = newCleanlinessRate;
-
-const priceRate = document.getElementById('priceRate');
-const newPriceRate = parseFloat(priceRate.textContent).toPrecision(2);
-priceRate.textContent = newPriceRate;
-
-document.getElementById('totalRate').textContent = (parseInt(newFoodQualityRate) + parseInt(newServiceRate) + parseInt(newAtmosphereRate) + parseInt(newCleanlinessRate) + parseInt(newPriceRate)) / 5;
+trasformToArray(foodQualityRate);
+trasformToArray(serviceRate);
+trasformToArray(atmosphereRate);
+trasformToArray(cleanlinessRate);
+trasformToArray(priceRate);
+trasformToArray(totalRate);

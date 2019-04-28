@@ -26,7 +26,6 @@
       </label>
       <select id="cat-select" name="review[category]" required>
         <option value="<%= review.category %>"><%= review.category %></option>
-        <option value="Tapas">Tapas</option>
         <option value="Paella">Paella</option>
         <option value="Coffe&Work">Coffe&Work</option>
         <option value="CheapEats">CheapEats</option>
@@ -55,8 +54,8 @@
       </div>
       <div class="rate">
         <h3>Taste:</h3>
-        <select name="taste" id="taste" required>
-          <option value="">-</option>
+        <select name="review[taste]" required>
+          <option value="<%= review.taste %>"><%= review.taste %></option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -66,8 +65,8 @@
       </div>
       <div class="rate">
         <h3>Presentation:</h3>
-        <select name="presentation" id="presentation" required>
-          <option value="">-</option>
+        <select name="review[presentation]" required>
+          <option value="<%=review.presentation%>"><%=review.presentation%></option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -77,8 +76,8 @@
       </div>
       <div class="rate">
         <h3>Quantity:</h3>
-        <select name="quantity" id="quantity" required>
-          <option value="">-</option>
+        <select name="review[quantity]" required>
+          <option value="<%=review.quantity%>"><%=review.quantity%></option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -93,8 +92,8 @@
       </div>
       <div class="rate">
         <h3>Courteus / Polite:</h3>
-        <select name="courteus" id="" required>
-          <option value="">-</option>
+        <select name="review[courteus]" required>
+          <option value="<%=review.courteus%>"><%=review.courteus%></option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -104,8 +103,8 @@
       </div>
       <div class="rate">
         <h3>Timing:</h3>
-        <select name="timing" id="" required>
-          <option value="">-</option>
+        <select name="review[timing]" required>
+          <option value="<%=review.timing%>"><%=review.timing%></option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -115,8 +114,8 @@
       </div>
       <div class="rate">
         <h3>Presence:</h3>
-        <select name="presence" id="presence" required>
-          <option value="">-</option>
+        <select name="review[presence]" required>
+          <option value="<%=review.presence%>"><%=review.presence%></option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -131,8 +130,8 @@
       </div>
       <div class="rate">
         <h3>Attractive</h3>
-        <select name="attractive" id="attractive" required>
-          <option value="">-</option>
+        <select name="review[attractive]" required>
+          <option value="<%=review.attractive%>"><%=review.attractive%></option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -142,8 +141,8 @@
       </div>
       <div class="rate">
         <h3>Cleanliness:</h3>
-        <select name="clean" id="" required>
-          <option value="">-</option>
+        <select name="review[clean]" required>
+          <option value="<%=review.clean%>"><%=review.clean%></option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -153,8 +152,8 @@
       </div>
       <div class="rate">
         <h3>Temperature:</h3>
-        <select name="temperature" id="temperature" required>
-          <option value="">-</option>
+        <select name="review[temperature]" required>
+          <option value="<%=review.temperature%>"><%=review.temperature%></option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -168,8 +167,8 @@
         </div>
         <div class="rate">
           <h3>Bathroom</h3>
-          <select name="bathroom" id="bathr" required>
-            <option value="">-</option>
+          <select name="review[bathroom]" required>
+            <option value="<%=review.bathroom%>"><%=review.bathroom%></option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -179,8 +178,8 @@
         </div>
         <div class="rate">
           <h3>Table:</h3>
-          <select name="table" id="table" required>
-            <option value="">-</option>
+          <select name="review[table]" required>
+            <option value="<%=review.table%>"><%=review.table%></option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -190,8 +189,8 @@
         </div>
         <div class="rate">
           <h3>Floor:</h3>
-          <select name="floor" id="floor" required>
-            <option value="">-</option>
+          <select name="review[floor]" required>
+            <option value="<%=review.floor%>"><%=review.floor%></option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -206,8 +205,8 @@
         </div>
         <div class="rate">
           <h3>Quality = to price</h3>
-          <select name="priceQuality" id="priceQual" required>
-            <option value="">-</option>
+          <select name="review[priceQuality]" required>
+            <option value="<%=review.priceQuality%>"><%=review.priceQuality%></option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -217,8 +216,8 @@
         </div>
         <div class="rate">
           <h3>Quantity = to price:</h3>
-          <select name="priceQuantity" id="priceQuan" required>
-            <option value="">-</option>
+          <select name="review[priceQuantity]" required>
+            <option value="<%=review.priceQuantity%>"><%=review.priceQuantity%></option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
