@@ -46,7 +46,7 @@
         <td id="atmosphereRate"><%= (review.attractive + review.clean + review.temperature) / 3 %></td>
         <td id="cleanlinessRate"><%= (review.bathroom + review.table + review.floor) / 3 %></td>
         <td id="priceRate"><%= (review.priceQuality + review.priceQuantity) / 2 %></td>
-        <td id="totalRate"></td>
+        <td class="totalRate"><%= (review.taste + review.presentation + review.quantity + review.courteus + review.timing + review.presence + review.attractive + review.clean + review.temperature + review.bathroom + review.table + review.floor + review.priceQuality + review.priceQuantity)/ 14%></td>
         <td><%= review.author %></td>
         <td><%= review.date.toDateString() %></td>
         <td>
@@ -55,7 +55,7 @@
           </form>
         </td>
         <td><a href="/reviews/<%=review.id%>/edit"><i id="edit" class="far fa-edit"></i></a></td>
-        <td><i id="notes" class="far fa-sticky-note"></i></td>
+        <td><a href="#" data-tool-tip="<%= review.notes %>"><i class="far fa-sticky-note"></i></a></td>
       </tr>
     </tbody>
   </table>

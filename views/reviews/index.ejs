@@ -60,7 +60,7 @@
           </form>
         </td>
         <td><a href="/reviews/<%=review.id%>/edit"><i id="edit" class="far fa-edit"></i></a></td>
-        <td><i id="notes" class="far fa-sticky-note"></i></td>
+        <td><a href="#" data-tool-tip="<%= review.notes %>"><i class="far fa-sticky-note"></i></a></td>
       </tr>
     </tbody>
     <% }); %>
@@ -70,3 +70,5 @@
 </body>
 
 </html>
+
+ 

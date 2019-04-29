@@ -84,3 +84,28 @@ tbody tr td {
   border-radius: 10px;
   font-family: 'Rubik', sans-serif;
 }
+
+a[data-tool-tip] {
+  position: relative;
+}
+
+a[data-tool-tip]::after {
+  content: attr(data-tool-tip);
+  position: absolute;
+  background-color: rgb(249, 244, 123);
+  padding: 1em 3em;
+  color: #000;
+  border-radius: 5px;
+  font-size: .8em;
+  right: 0;
+  bottom: 0;
+  white-space: nowrap;
+  transform: scale(0);
+  transition:
+    transform ease-out 150ms,
+    bottom ease-out 150ms;
+}
+
+a[data-tool-tip]:hover::after {
+  transform: scale(1);
+}

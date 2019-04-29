@@ -12,7 +12,7 @@
 <body>
   <div id="title">
     <h1>Edit Form</h1>
-    <em>You're editing <%= review.name %> review did by <%= review.author %></em>
+    <em>You're editing <%= review.name %>, <br> review did by <%= review.author %></em>
   </div>
 
   <form id="place-form" action="/reviews/<%=review.id%>?_method=PUT" method="POST">
