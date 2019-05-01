@@ -25,7 +25,7 @@ trasformToArray(totalRate);
 const placeRaw = document.querySelectorAll('.place-list');
 Array.from(placeRaw).forEach(function (row) {
   row.addEventListener('mouseover', function () {
-    row.style.background = "#ddd8d8";
+    row.style.background = "#ffdd00";
   });
   row.addEventListener('mouseout', function () {
     row.style.background = "transparent";

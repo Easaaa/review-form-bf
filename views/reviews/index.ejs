@@ -12,7 +12,19 @@
 </head>
 
 <body>
-  <h1>Database</h1>
+
+  <div id="nav">
+    <div class="nav-btn">
+      <a href="/">Home</a>
+    </div>
+    <div class="nav-btn">
+      <a href="new">Form</a>
+    </div>
+    <div class="nav-btn">
+      <a href="#">LogOut</a>
+    </div>
+
+  </div>
 
   <form id="search-bar">
     <input type="text" placeholder="Search Category">
@@ -51,7 +63,9 @@
         <td class="atmosphereRate"><%= (review.attractive + review.clean + review.temperature) / 3 %></td>
         <td class="cleanlinessRate"><%= (review.bathroom + review.table + review.floor) / 3 %></td>
         <td class="priceRate"><%= (review.priceQuality + review.priceQuantity) / 2 %></td>
-        <td class="totalRate"><%= (review.taste + review.presentation + review.quantity + review.courteus + review.timing + review.presence + review.attractive + review.clean + review.temperature + review.bathroom + review.table + review.floor + review.priceQuality + review.priceQuantity)/ 14%></td>
+        <td class="totalRate">
+          <%= (review.taste + review.presentation + review.quantity + review.courteus + review.timing + review.presence + review.attractive + review.clean + review.temperature + review.bathroom + review.table + review.floor + review.priceQuality + review.priceQuantity)/ 14%>
+        </td>
         <td><%= review.author %></td>
         <td><%= review.date.toDateString() %></td>
         <td>
@@ -66,9 +80,7 @@
     <% }); %>
   </table>
 
-<script src="/javascripts/reviewIndex.js"></script>
+  <script src="/javascripts/reviewIndex.js"></script>
 </body>
 
 </html>
-
- 
