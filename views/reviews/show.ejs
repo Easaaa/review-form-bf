@@ -43,10 +43,10 @@
         <td><%= review.category %></td>
         <td id="foodQualityRate"><%= (review.taste + review.presentation + review.quantity) / 3%></td>
         <td id="serviceRate"><%= (review.courteus + review.timing + review.presence) / 3 %></td>
-        <td id="atmosphereRate"><%= (review.attractive + review.clean + review.temperature) / 3 %></td>
-        <td id="cleanlinessRate"><%= (review.bathroom + review.table + review.floor) / 3 %></td>
+        <td id="atmosphereRate"><%= (review.attractive + review.generalClean + review.temperature) / 3 %></td>
+        <td id="cleanlinessRate"><%= (review.bathroom + review.tableFloor) / 2 %></td>
         <td id="priceRate"><%= (review.priceQuality + review.priceQuantity) / 2 %></td>
-        <td class="totalRate"><%= (review.taste + review.presentation + review.quantity + review.courteus + review.timing + review.presence + review.attractive + review.clean + review.temperature + review.bathroom + review.table + review.floor + review.priceQuality + review.priceQuantity)/ 14%></td>
+        <td class="totalRate"><%= (review.taste + review.presentation + review.quantity + review.courteus + review.timing + review.presence + review.attractive + review.generalClean + review.temperature + review.bathroom + review.tableFloor + review.priceQuality + review.priceQuantity)/ 13 %></td>
         <td><%= review.author %></td>
         <td><%= review.date.toDateString() %></td>
         <td>

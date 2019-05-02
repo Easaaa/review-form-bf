@@ -3,6 +3,7 @@ body {
   width: 100%;
   margin: 0 auto;
   font-family: sans-serif;
+  color: #4f555b;
 }
 
 h1 {
@@ -15,7 +16,7 @@ h1 {
 h2 {
   font-weight: 100;
   text-decoration: underline;
-  color: rgb(252, 69, 69);
+  color: rgb(255, 97, 97);
 }
 
 h3 {
@@ -29,12 +30,6 @@ textarea {
   padding: 20px;
 }
 
-#title {
-  text-align: center;
-  background: whitesmoke;
-  padding: 10px;
-}
-
 #place-name {
   padding: 15px 0;
   margin: 0 auto;
@@ -46,7 +41,8 @@ textarea {
   max-width: 300px;
   text-align: center;
   font-size: 1rem;
-  background: rgb(255, 185, 185);
+  background: rgb(254, 206, 206);
+  border: none;
 }
 
 #category {
@@ -86,7 +82,7 @@ textarea {
 }
 
 #button input {
-  background: rgb(158, 158, 158);
+  background: rgb(250, 156, 156);
   color: white;
   border: none;
   padding: 10px 30px;

@@ -141,8 +141,8 @@
       </div>
       <div class="rate">
         <h3>Cleanliness:</h3>
-        <select name="review[clean]" required>
-          <option value="<%=review.clean%>"><%=review.clean%></option>
+        <select name="review[gernalClean]" required>
+          <option value="<%=review.gernalClean%>"><%=review.gernalClean%></option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -168,7 +168,7 @@
         <div class="rate">
           <h3>Bathroom</h3>
           <select name="review[bathroom]" required>
-            <option value="<%=review.bathroom%>"><%=review.bathroom%></option>
+            <option value="<%=review.bathroom %>"><%= review.bathroom %></option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -177,20 +177,9 @@
           </select>
         </div>
         <div class="rate">
-          <h3>Table:</h3>
-          <select name="review[table]" required>
-            <option value="<%=review.table%>"><%=review.table%></option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
-        </div>
-        <div class="rate">
-          <h3>Floor:</h3>
-          <select name="review[floor]" required>
-            <option value="<%=review.floor%>"><%=review.floor%></option>
+          <h3>Table & Floor:</h3>
+          <select name="review[tableFloor]" required>
+            <option value="<%=review.tableFloor%>"><%= review.tableFloor%></option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>

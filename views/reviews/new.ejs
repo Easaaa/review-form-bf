@@ -10,10 +10,6 @@
 </head>
 
 <body>
-  <div id="title">
-    <h1>Review Form</h1>
-    <em>Reviwer's Name</em>
-  </div>
 
   <form id="place-form" action="/reviews" method="POST">
     <div id="place-name">
@@ -93,7 +89,7 @@
       </div>
       <div class="rate">
         <h3>Courteus / Polite:</h3>
-        <select name="review[courteus]" id="" required>
+        <select name="review[courteus]" required>
           <option value="">-</option>
           <option value="1">1</option>
           <option value="2">2</option>
@@ -104,7 +100,7 @@
       </div>
       <div class="rate">
         <h3>Timing:</h3>
-        <select name="review[timing]" id="" required>
+        <select name="review[timing]" required>
           <option value="">-</option>
           <option value="1">1</option>
           <option value="2">2</option>
@@ -142,7 +138,7 @@
       </div>
       <div class="rate">
         <h3>Cleanliness:</h3>
-        <select name="review[clean]" id="" required>
+        <select name="review[gernalClean]" id="" required>
           <option value="">-</option>
           <option value="1">1</option>
           <option value="2">2</option>
@@ -168,7 +164,7 @@
         </div>
         <div class="rate">
           <h3>Bathroom</h3>
-          <select name="review[bathroom]" id="bathr" required>
+          <select name="review[bathroom]" required>
             <option value="">-</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -178,19 +174,8 @@
           </select>
         </div>
         <div class="rate">
-          <h3>Table:</h3>
-          <select name="review[table]" id="table" required>
-            <option value="">-</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
-        </div>
-        <div class="rate">
-          <h3>Floor:</h3>
-          <select name="review[floor]" id="floor" required>
+          <h3>Table & Floor:</h3>
+          <select name="review[tableFloor]" required>
             <option value="">-</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -232,7 +217,7 @@
           placeholder="NOTES" required></textarea>
       </div>
       <div id="button">
-        <input id="btn" type="submit" value="Submit"></input>
+        <input id="btn" type="submit" value="Submit" ></input>
       </div>
   </form>
 
