@@ -15,8 +15,8 @@ h1 {
 
 h2 {
   font-weight: 100;
-  text-decoration: underline;
-  color: rgb(255, 97, 97);
+  margin: 0;
+  color: #4f555b;
 }
 
 h3 {
@@ -40,18 +40,28 @@ textarea {
   padding: 10px 30px;
   max-width: 300px;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.3rem;
   background: rgb(254, 206, 206);
+  -webkit-box-shadow: 3px 3px 3px -3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 3px 3px -3px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 3px 3px -3px rgba(0, 0, 0, 0.75);
   border: none;
+  font-weight: 100;
 }
 
 #category {
   width: 100%;
   text-align: center;
-  border-bottom: 1px solid rgb(168, 168, 168);
-  max-width: 300px;
+  -webkit-box-shadow: 0px 4px 12px -9px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 4px 12px -9px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 4px 12px -9px rgba(0, 0, 0, 0.75);
+  max-width: 260px;
   margin: 0 auto;
-  padding: 0 20px 20px 20px;
+  padding: 20px;
+}
+
+#category h2 {
+  margin-bottom: 10px;
 }
 
 #date-review {
@@ -65,9 +75,15 @@ textarea {
 .row {
   width: 100%;
   text-align: center;
-  border-bottom: 1px solid rgb(168, 168, 168);
   max-width: 300px;
   margin: 0 auto;
+  padding: 20px 0;
+  /* webkit-box-shadow: 0px 4px 4px -2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 4px 4px -2px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 4px 4px -2px rgba(0, 0, 0, 0.75); */
+  -webkit-box-shadow: 0px 4px 12px -9px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 4px 12px -9px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 4px 12px -9px rgba(0, 0, 0, 0.75);
 }
 
 .rate {
@@ -82,7 +98,7 @@ textarea {
 }
 
 #button input {
-  background: rgb(250, 156, 156);
+  background: #4f555b;
   color: white;
   border: none;
   padding: 10px 30px;
