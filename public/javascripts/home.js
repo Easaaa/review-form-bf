@@ -1,11 +1,14 @@
 const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
-const container = document.getElementById('container');
+const goBackButton = document.getElementById('goBack');
+const signUp_container_div = document.querySelector('.sign-up-container');
+const signIn_container_div = document.querySelector('.sign-in-container');
 
 signUpButton.addEventListener('click', () => {
-  container.classList.add("right-panel-active");
+  signIn_container_div.style.display = "none";
+  signUp_container_div.style.display = "inline";
 });
 
-signInButton.addEventListener('click', () => {
-  container.classList.remove("right-panel-active");
+goBackButton.addEventListener('click', () => {
+  signIn_container_div.style.display = "inline";
+  signUp_container_div.style.display = "none";
 });

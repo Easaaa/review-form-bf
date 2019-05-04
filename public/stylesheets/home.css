@@ -6,14 +6,11 @@
 
 body {
   background: #f6f5f7;
-  display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   font-family: 'Montserrat', sans-serif;
-  height: 100vh;
-  margin: -20px 0 50px;
-  color: #4f555b;
+  height: 100%;
+  color: white;
 }
 
 h1 {
@@ -35,10 +32,11 @@ p {
 
 span {
   font-size: 12px;
+  color: white;
 }
 
 a {
-  color: #333;
+  color: #fff;
   font-size: 14px;
   text-decoration: none;
   margin: 15px 0;
@@ -46,15 +44,16 @@ a {
 
 button {
   border-radius: 20px;
-  border: 1px solid #4f555b;
-  background-color: #4f555b;
-  color: #FFFFFF;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
   font-size: 12px;
   font-weight: bold;
-  padding: 12px 45px;
+  padding: 10px 36px;
   letter-spacing: 1px;
   text-transform: uppercase;
   transition: transform 80ms ease-in;
+  margin: 10px;
 }
 
 button:active {
@@ -65,9 +64,9 @@ button:focus {
   outline: none;
 }
 
-button.ghost {
-  background-color: transparent;
-  border-color: #FFFFFF;
+
+.buttons {
+  display: inherit;
 }
 
 form {
@@ -76,9 +75,16 @@ form {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0 50px;
+  padding: 0 20px;
   height: 100%;
+  max-width: 430px;
   text-align: center;
+  background: -webkit-linear-gradient(to right, #6e92b7, #4f555b);
+  background: linear-gradient(to right, #6e92b7, #124375);
+}
+
+form img {
+  max-width: 200px;
 }
 
 input {
@@ -87,6 +93,7 @@ input {
   padding: 12px 15px;
   margin: 8px 0;
   width: 100%;
+  border-radius: 45px;
 }
 
 .container {
@@ -96,9 +103,10 @@ input {
     0 10px 10px rgba(0, 0, 0, 0.22);
   position: relative;
   overflow: hidden;
-  width: 768px;
-  max-width: 100%;
+  min-width: 350px;
+  max-width: 430px;
   min-height: 480px;
+  margin: 90px auto 0 auto;
 }
 
 .form-container {
@@ -110,8 +118,7 @@ input {
 
 .sign-in-container {
   left: 0;
-  width: 50%;
-  z-index: 2;
+  width: 100%;
 }
 
 .container.right-panel-active .sign-in-container {
@@ -120,12 +127,11 @@ input {
 
 .sign-up-container {
   left: 0;
-  width: 50%;
-  opacity: 0;
-  z-index: 1;
+  width: 100%;
+  display: none;
 }
 
-.container.right-panel-active .sign-up-container {
+/* .container.right-panel-active .sign-up-container {
   transform: translateX(100%);
   opacity: 1;
   z-index: 5;
@@ -145,8 +151,9 @@ input {
     opacity: 1;
     z-index: 5;
   }
-}
+} */
 
+/* 
 .overlay-container {
   position: absolute;
   top: 0;
@@ -212,13 +219,14 @@ input {
 
 .container.right-panel-active .overlay-right {
   transform: translateX(20%);
-}
+} */
 
 .social-container {
   margin: 20px 0;
 }
 
 .social-container a {
+  color: white;
   border: 1px solid #DDDDDD;
   border-radius: 50%;
   display: inline-flex;
