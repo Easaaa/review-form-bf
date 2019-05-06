@@ -5,7 +5,7 @@ body {
   width: 100%;
   margin: 0 auto;
   font-family: 'Montserrat', sans-serif;
-  color: #4f555b;
+  color: white;
 }
 
 h1 {
@@ -18,7 +18,7 @@ h1 {
 h2 {
   font-weight: 100;
   margin: 0;
-  color: #4f555b;
+  color: white;
 }
 
 h3 {
@@ -28,8 +28,16 @@ h3 {
 
 textarea {
   border: none;
-  background: whitesmoke;
+  background: transparent;
+  color: white;
   padding: 20px;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  outline: 0px none transparent
+}
+
+textarea::-webkit-input-placeholder {
+  color: white;
 }
 
 #place-name {
@@ -44,9 +52,10 @@ textarea {
   text-align: center;
   font-size: 1.3rem;
   background: rgb(254, 206, 206);
-  -webkit-box-shadow: 3px 3px 3px -3px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 3px 3px 3px -3px rgba(0, 0, 0, 0.75);
-  box-shadow: 3px 3px 3px -3px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 4px 12px -2px #124375;
+  -moz-box-shadow: 2px 4px 12px -2px #124375;
+  box-shadow: 2px 4px 12px -2px #124375;
+  border-radius: 15px;
   border: none;
   font-weight: 100;
 }
@@ -54,13 +63,15 @@ textarea {
 #category {
   width: 100%;
   text-align: center;
-  -webkit-box-shadow: 0px 4px 12px -9px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 4px 12px -9px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 4px 12px -9px rgba(0, 0, 0, 0.75);
   max-width: 260px;
   margin: 0 auto;
   padding: 20px;
-  background-color: whitesmoke;
+  -webkit-box-shadow: 2px 4px 12px -2px #124375;
+  -moz-box-shadow: 2px 4px 12px -2px #124375;
+  box-shadow: 2px 4px 12px -2px #124375;
+  background: -webkit-linear-gradient(to right, #6e92b7, #4f555b);
+  background: linear-gradient(to right, #6e92b7, #124375);
+  border-radius: 15px;
 }
 
 #category h2 {
@@ -84,10 +95,12 @@ textarea {
   /* webkit-box-shadow: 0px 4px 4px -2px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 4px 4px -2px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 4px 4px -2px rgba(0, 0, 0, 0.75); */
-  -webkit-box-shadow: 0px 4px 12px -9px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 4px 12px -9px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 4px 12px -9px rgba(0, 0, 0, 0.75);
-  background-color: whitesmoke;
+  -webkit-box-shadow: 2px 4px 12px -2px #124375;
+  -moz-box-shadow: 2px 4px 12px -2px #124375;
+  box-shadow: 2px 4px 12px -2px #124375;
+  background: -webkit-linear-gradient(to right, #6e92b7, #4f555b);
+  background: linear-gradient(to right, #6e92b7, #124375);
+  border-radius: 15px;
 }
 
 .rate {
@@ -98,13 +111,11 @@ textarea {
   width: 100%;
   text-align: center;
   margin: 0 auto;
-  padding: 20px 0;
+  padding-bottom: 20px;
 }
 
 #button input {
-  background-color: #4f555b;
-  -moz-background-color: #4f555b;
-  -webkit-background-color: #4f555b;
+  background: #6e92b7;
   color: white;
   border: none;
   -webkit-border: none;

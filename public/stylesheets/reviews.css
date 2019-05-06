@@ -59,13 +59,13 @@ a {
   font-size: 1.3rem;
   padding: 10px 20px;
   font-weight: 100;
-  border-bottom: 2px solid #6a737b;
-  color: #4f555b;
+  border-bottom: 2px solid #124375;
+  color: #124375;
   transition: 0.3s ease-in;
 }
 
 #nav .nav-btn a:hover {
-  background: #6a737b;
+  background: #124375;
   color: white;
 }
 
@@ -87,13 +87,14 @@ table {
 }
 
 thead {
-  background: #6a737b;
+  background: -webkit-linear-gradient(to right, #6e92b7, #4f555b);
+  background: linear-gradient(to right, #6e92b7, #124375);
   color: white;
 }
 
 
 thead tr th {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 400;
   text-transform: uppercase;
   padding: 10px;
