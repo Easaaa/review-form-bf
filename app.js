@@ -17,7 +17,7 @@ const reviews = require('./routes/reviews');
 const app = express();
 
 // connect to the database
-mongoose.connect('mongodb://127.0.0.1/test', {
+mongoose.connect('mongodb://127.0.0.1/database1.0', {
   useNewUrlParser: true
 });
 
